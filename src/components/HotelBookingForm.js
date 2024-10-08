@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import '../css/HotelBookingForm.css';
 
 const HotelBookingForm = () => {
+  // State to hold form data
   const [formData, setFormData] = useState({
     destination: '',
     checkInDate: '',
@@ -10,6 +11,7 @@ const HotelBookingForm = () => {
     roomType: 'standard'
   });
 
+  // Handle input changes and update the state
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({
@@ -18,9 +20,10 @@ const HotelBookingForm = () => {
     });
   };
 
+  // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Submit form data here
+    // Submit form data here (currently logs to console)
     console.log(formData);
   };
 
@@ -28,6 +31,7 @@ const HotelBookingForm = () => {
     <div className="booking-form-container">
       <h2 className="form-title">Hotel Booking Form</h2>
       <form className="booking-form" onSubmit={handleSubmit}>
+        {/* Destination input */}
         <div className="form-group">
           <label htmlFor="destination">Destination:</label>
           <input
@@ -40,6 +44,7 @@ const HotelBookingForm = () => {
           />
         </div>
 
+        {/* Check-In Date input */}
         <div className="form-group">
           <label htmlFor="checkInDate">Check-In Date:</label>
           <input
@@ -52,6 +57,7 @@ const HotelBookingForm = () => {
           />
         </div>
 
+        {/* Check-Out Date input */}
         <div className="form-group">
           <label htmlFor="checkOutDate">Check-Out Date:</label>
           <input
@@ -64,6 +70,7 @@ const HotelBookingForm = () => {
           />
         </div>
 
+        {/* Number of Guests input */}
         <div className="form-group">
           <label htmlFor="guests">Number of Guests:</label>
           <input
@@ -77,6 +84,7 @@ const HotelBookingForm = () => {
           />
         </div>
 
+        {/* Room Type selection */}
         <div className="form-group">
           <label htmlFor="roomType">Room Type:</label>
           <select
@@ -92,6 +100,7 @@ const HotelBookingForm = () => {
           </select>
         </div>
 
+        {/* Submit button */}
         <button type="submit" className="submit-btn">Book Now</button>
       </form>
     </div>

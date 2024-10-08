@@ -5,15 +5,15 @@ import logo from '../../img/logo.webp';
 export default function Footer() {
   return (
     <>
-      <div
-        className="container-fluid bg-dark text-light footer fadeIn mt-5"
-        data-wow-delay="0.1s"
-      >
+      {/* Main footer container */}
+      <div className="container-fluid bg-dark text-light footer fadeIn mt-5" data-wow-delay="0.1s">
         <div className="container pb-5">
           <div className="row g-5">
+            {/* Logo section */}
             <div className="col-md-6 col-lg-4">
-               <img src={logo} alt="" style={{width:'250px',height:'200px', borderRadius:'50%'}} />
+              <img src={logo} alt="Company Logo" style={{ width: '250px', height: '200px', borderRadius: '50%' }} />
             </div>
+            {/* Contact information section */}
             <div className="col-md-6 col-lg-3">
               <h6 className="section-title text-start text-primary text-uppercase mb-4">
                 Contact
@@ -23,14 +23,16 @@ export default function Footer() {
                   {val.icon} {val.name}
                 </p>
               ))}
+              {/* Social media icons */}
               <div className="d-flex pt-2">
                 {socialIcons.slice(0, 4).map((val, index) => (
-                  <a className="btn btn-outline-light btn-social" href="">
+                  <a className="btn btn-outline-light btn-social" href="" key={index}>
                     {val.icon}
                   </a>
                 ))}
               </div>
             </div>
+            {/* Footer navigation items */}
             <div className="col-lg-5 col-md-12">
               <div className="row gy-5 g-4">
                 {footerItem.map((section, sectionIndex) => (

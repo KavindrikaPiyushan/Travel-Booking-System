@@ -1,16 +1,15 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom"; // Import useNavigate
+import { useNavigate } from "react-router-dom"; // Importing useNavigate for navigation
 import "../css/Login.css"; // Importing CSS file for styling
-
 import sideImage from '../img/bg.jpg'; // Image to be placed on the right
 
 export default function Login() {
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
-  const navigate = useNavigate(); // Initialize useNavigate
+  const [username, setUsername] = useState(""); // State for username
+  const [password, setPassword] = useState(""); // State for password
+  const navigate = useNavigate(); // Initialize useNavigate for navigation
 
   const handleSubmit = (e) => {
-    e.preventDefault();
+    e.preventDefault(); // Prevent the default form submission
     // Check if credentials match
     if (username === "testuser" && password === "1234") {
       console.log("Login successful!");
@@ -35,7 +34,7 @@ export default function Login() {
                 type="text"
                 id="username"
                 value={username}
-                onChange={(e) => setUsername(e.target.value)}
+                onChange={(e) => setUsername(e.target.value)} // Update username state
                 placeholder="Enter your username"
                 required
               />
@@ -46,14 +45,12 @@ export default function Login() {
                 type="password"
                 id="password"
                 value={password}
-                onChange={(e) => setPassword(e.target.value)}
+                onChange={(e) => setPassword(e.target.value)} // Update password state
                 placeholder="Enter your password"
                 required
               />
             </div>
-            <button type="submit" className="login-button">
-              Login
-            </button>
+            <button type="submit" className="login-button">Login</button>
             <p className="login-footer">
               Don't have an account? <a href="/signup">Sign Up</a>
             </p>

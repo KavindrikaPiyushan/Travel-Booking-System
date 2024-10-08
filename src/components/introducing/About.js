@@ -8,7 +8,7 @@ export default function About() {
   useEffect(() => {
     new WOW.WOW({
       live: false,
-    }).init();
+    }).init(); // Initialize WOW.js for animations
   }, []);
 
   return (
@@ -16,6 +16,7 @@ export default function About() {
       <div className="container-xxl py-5">
         <div className="container">
           <div className="row g-5 align-items-center">
+            {/* Left column with text content */}
             <div className="col-lg-6">
               <h6 className="section-title text-start text-primary text-uppercase">
                 About Us
@@ -30,6 +31,7 @@ export default function About() {
                 sed stet lorem sit clita duo justo magna dolore erat amet
               </p>
               <div className="row g-3 pb-4">
+                {/* Map through about data for stats */}
                 {about.map((item, key) => (
                   <div
                     className="col-sm-4 wow fadeIn"
@@ -38,11 +40,11 @@ export default function About() {
                   >
                     <div className="border rounded p-1">
                       <div className="border rounded text-center p-4">
-                        {item.icon}
+                        {item.icon} {/* Render the icon */}
                         <h2 className="mb-1" data-toggle="counter-up">
-                          {item.count}
+                          {item.count} {/* Display the count */}
                         </h2>
-                        <p className="mb-0">{item.text}</p>
+                        <p className="mb-0">{item.text}</p> {/* Display text */}
                       </div>
                     </div>
                   </div>

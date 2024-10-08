@@ -4,47 +4,33 @@ import { facility, roomItems } from "../data/Data";
 import "../../css/HotelBookingForm.css";
 
 export default function Rooms() {
-  const [isPopupVisible, setPopupVisible] = useState(false);
-  const [isReviewPopupVisible, setReviewPopupVisible] = useState(false);
-  const [isReviewListVisible, setReviewListVisible] = useState(false); // State for review list popup
-  const [reviews, setReviews] = useState([]); // State to store reviews
+  // State management for popups and reviews
+  const [isPopupVisible, setPopupVisible] = useState(false); // Controls booking form visibility
+  const [isReviewPopupVisible, setReviewPopupVisible] = useState(false); // Controls review form visibility
+  const [isReviewListVisible, setReviewListVisible] = useState(false); // Controls review list visibility
+  const [reviews, setReviews] = useState([]); // State to store submitted reviews
   const [reviewForm, setReviewForm] = useState({
     name: "",
     rating: "",
-    comments: ""
+    comments: "",
   });
 
-  // Dummy review data
+  // Dummy review data for display
   const dummyReviews = [
     { name: "Alice", rating: 5, comments: "Amazing experience!" },
     { name: "Bob", rating: 4, comments: "Very good service." },
-    { name: "Charlie", rating: 3, comments: "Average stay." }
+    { name: "Charlie", rating: 3, comments: "Average stay." },
   ];
 
-  const openPopup = () => {
-    setPopupVisible(true);
-  };
+  // Functions to handle popup visibility
+  const openPopup = () => setPopupVisible(true);
+  const closePopup = () => setPopupVisible(false);
+  const openReviewPopup = () => setReviewPopupVisible(true);
+  const closeReviewPopup = () => setReviewPopupVisible(false);
+  const openReviewListPopup = () => setReviewListVisible(true);
+  const closeReviewListPopup = () => setReviewListVisible(false);
 
-  const closePopup = () => {
-    setPopupVisible(false);
-  };
-
-  const openReviewPopup = () => {
-    setReviewPopupVisible(true);
-  };
-
-  const closeReviewPopup = () => {
-    setReviewPopupVisible(false);
-  };
-
-  const openReviewListPopup = () => {
-    setReviewListVisible(true);
-  };
-
-  const closeReviewListPopup = () => {
-    setReviewListVisible(false);
-  };
-
+  // Handle review form input changes
   const handleReviewChange = (e) => {
     const { name, value } = e.target;
     setReviewForm({
@@ -53,15 +39,15 @@ export default function Rooms() {
     });
   };
 
+  // Submit review and reset form
   const handleReviewSubmit = (e) => {
     e.preventDefault();
-    // Store review
-    setReviews([...reviews, reviewForm]);
+    setReviews([...reviews, reviewForm]); // Add new review to the list
     setReviewForm({ name: "", rating: "", comments: "" }); // Reset form
-    closeReviewPopup();
-    console.log(reviews); // You can handle review display or submission here
+    closeReviewPopup(); // Close review popup
   };
 
+  // State for booking form data
   const [formData, setFormData] = useState({
     destination: "",
     checkInDate: "",
@@ -70,6 +56,7 @@ export default function Rooms() {
     roomType: "standard",
   });
 
+  // Handle booking form input changes
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({
@@ -78,18 +65,18 @@ export default function Rooms() {
     });
   };
 
+  // Submit booking form data
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Submit form data here
-    console.log(formData);
+    console.log(formData); // Handle form submission
   };
 
   return (
     <>
-      <div className="container-xxl py-5 ">
+      <div className="container-xxl py-5">
         <div className="container">
           <CommonHeading
-            heading=" Hotels"
+            heading="Hotels"
             title=""
             subtitle="Explore Our Recommendations"
           />
@@ -98,11 +85,16 @@ export default function Rooms() {
               <div
                 className="col-lg-4 col-md-6 wow fadeInUp"
                 data-wow-delay="0.1s"
-                key={key} // Added key for mapping
+                key={key} // Key for mapping
               >
                 <div className="room-item shadow rounded overflow-hidden">
                   <div className="position-relative">
-                    <img className="img-fluid" src={item.img} alt="img" style={{ width: '500px', height: '300px' }} />
+                    <img
+                      className="img-fluid"
+                      src={item.img}
+                      alt="Room"
+                      style={{ width: "500px", height: "300px" }}
+                    />
                     <small className="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">
                       {item.price}
                     </small>
@@ -110,11 +102,11 @@ export default function Rooms() {
                   <div className="p-4 mt-2">
                     <div className="d-flex justify-content-between mb-3">
                       <h5 className="mb-0">{item.name}</h5>
-                      <div style={{ display: 'flex', flexDirection: 'column' }}>
-                        <div className="ps-2">{item.star} </div>
+                      <div style={{ display: "flex", flexDirection: "column" }}>
+                        <div className="ps-2">{item.star}</div>
                         <a
                           href="#"
-                          style={{ fontSize: '15px', textAlign: 'center' }}
+                          style={{ fontSize: "15px", textAlign: "center" }}
                           onClick={(e) => {
                             e.preventDefault();
                             openReviewListPopup(); // Open review list popup
@@ -139,7 +131,7 @@ export default function Rooms() {
                         href="#"
                         onClick={(e) => {
                           e.preventDefault();
-                          openReviewPopup();
+                          openReviewPopup(); // Open review form popup
                         }}
                       >
                         Add Review
@@ -149,7 +141,7 @@ export default function Rooms() {
                         href="#"
                         onClick={(e) => {
                           e.preventDefault();
-                          openPopup();
+                          openPopup(); // Open booking form popup
                         }}
                       >
                         {item.darkbtn}
@@ -227,31 +219,30 @@ export default function Rooms() {
 
           {/* Review List Popup */}
           {isReviewListVisible && (
-  <>
-    <div className="popup-overlay"></div>
-    <div className="review-popup">
-      <h2 className="form-title">Reviews</h2>
-      <div className="review-list">
-        {dummyReviews.concat(reviews).map((review, index) => (
-          <div key={index} className="review-item">
-            <h5>{review.name}</h5>
-            <p>Rating: {review.rating} ⭐</p>
-            <p>{review.comments}</p>
-          </div>
-        ))}
-      </div>
-      <button
-        type="button"
-        onClick={closeReviewListPopup}
-         className="submit-btn"
-        style={{ marginTop: "10px",backgroundColor: "gray" }}
-        
-      >
-        Close
-      </button>
-    </div>
-  </>
-)}
+            <>
+              <div className="popup-overlay"></div>
+              <div className="review-popup">
+                <h2 className="form-title">Reviews</h2>
+                <div className="review-list">
+                  {dummyReviews.concat(reviews).map((review, index) => (
+                    <div key={index} className="review-item">
+                      <h5>{review.name}</h5>
+                      <p>Rating: {review.rating} ⭐</p>
+                      <p>{review.comments}</p>
+                    </div>
+                  ))}
+                </div>
+                <button
+                  type="button"
+                  onClick={closeReviewListPopup}
+                  className="submit-btn"
+                  style={{ marginTop: "10px", backgroundColor: "gray" }}
+                >
+                  Close
+                </button>
+              </div>
+            </>
+          )}
 
           {/* Booking Popup */}
           {isPopupVisible && (
@@ -299,9 +290,9 @@ export default function Rooms() {
                       type="number"
                       id="guests"
                       name="guests"
-                      min="1"
                       value={formData.guests}
                       onChange={handleChange}
+                      min="1"
                       required
                     />
                   </div>
@@ -312,7 +303,6 @@ export default function Rooms() {
                       name="roomType"
                       value={formData.roomType}
                       onChange={handleChange}
-                      required
                     >
                       <option value="standard">Standard</option>
                       <option value="deluxe">Deluxe</option>
@@ -320,7 +310,7 @@ export default function Rooms() {
                     </select>
                   </div>
                   <button type="submit" className="submit-btn">
-                    Confirm Booking
+                    Book Now
                   </button>
                   <button
                     type="button"
