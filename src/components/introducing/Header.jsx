@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { navList } from "../data/Data";
-import SocialIcons from "./SocialIcons";
 import '../../css/Navbar.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSignInAlt } from '@fortawesome/free-solid-svg-icons';
@@ -23,7 +22,7 @@ export default function Header() {
 
   return (
     <>
-      <div className="container-fluid bg-dark px-0">
+      <div className="container-fluid bg-dark px-0 py-3">
         <div className="row gx-0">
           <div className="col-lg-3 bg-dark d-none d-lg-block">
             <Link
@@ -53,39 +52,10 @@ export default function Header() {
                 }
               >
                 <div className="navbar-nav mr-auto py-0">
-                  {navList.map((item, index) => (
-                    <div key={index}>
-                      {item.subItems ? (
-                        <div
-                          className="nav-item dropdown"
-                          onMouseEnter={() => handleMouseEnter(item.id)}
-                          onMouseLeave={handleMouseLeave}
-                        >
-                          <Link className="nav-link dropdown-toggle">
-                            {item.text}
-                          </Link>
-                          <div
-                            className={`dropdown-menu rounded-0 m-0 ${
-                              activeDropdown === item.id ? "show" : ""
-                            }`}
-                          >
-                            {item.subItems.map((sub) => (
-                              <Link to={sub.path} className="dropdown-item">
-                                {sub.text}
-                              </Link>
-                            ))}
-                          </div>
-                        </div>
-                      ) : (
-                        <Link to={item.path} className="nav-item nav-link">
-                          {item.text}
-                        </Link>
-                      )}
-                    </div>
-                  ))}
+                  
                 </div>
-                <a href=""  onClick={() => navigate('/')}>
-                  Logout <FontAwesomeIcon icon={faSignInAlt} className="me-2" />
+                <a href=""  onClick={() => navigate('/login')} style={{marginTop:'10px',marginLeft:'800px' }}>
+                  Login <FontAwesomeIcon icon={faSignInAlt} className="me-2" />
                 </a>
               </div>
             </nav>
