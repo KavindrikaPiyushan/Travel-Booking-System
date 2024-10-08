@@ -33,28 +33,6 @@ export const navList = [
     text: "Car Rentals",
   },
   {
-    id: 5,
-    path: "/page",
-    text: "Page",
-    subItems: [
-      {
-        id: 51,
-        path: "/booking",
-        text: "Booking",
-      },
-      {
-        id: 52,
-        path: "/team",
-        text: "Our Team",
-      },
-      {
-        id: 53,
-        path: "/testimonial",
-        text: "Testimonial",
-      },
-    ],
-  },
-  {
     id: 6,
     path: "/contact",
     text: "Contact",
@@ -84,12 +62,14 @@ export const carouselData = [
     title: " Book Your Dream Flight with Ease",
     subtitle: "Explore the World Safely",
     btn2: "Book Flight",
+    link:"/flightBooking"
   },
   {
     img: "../assets/img/bg3.webp",
     title: "Top Most Hotles in the World",
     subtitle: "Book with lowest price",
     btn2: "Book Hotel",
+    link:"/rooms"
   },
   {
     img: "../assets/img/bg2.webp",
@@ -249,38 +229,6 @@ export const contact = [
     icon: <i class="fa fa-envelope-open text-primary me-2"></i>,
     title: "General",
     email: "info@example.com",
-  },
-];
-export const testimonial = [
-  {
-    description:
-      "Tempor stet labore dolor clita stet diam amet ipsum dolor duo ipsum rebum stet dolor amet diam stet. Est stet ea lorem amet est kasd kasd et erat magna eos",
-    name: "Client Name",
-    profession: "Profession",
-    icon: (
-      <i class="fa fa-quote-right fa-3x text-primary position-absolute end-0 bottom-0 me-4 mb-n1"></i>
-    ),
-    img: "../assets/img/testimonial-1.jpg",
-  },
-  {
-    description:
-      "Tempor stet labore dolor clita stet diam amet ipsum dolor duo ipsum rebum stet dolor amet diam stet. Est stet ea lorem amet est kasd kasd et erat magna eos",
-    name: "Client Name",
-    profession: "Profession",
-    icon: (
-      <i class="fa fa-quote-right fa-3x text-primary position-absolute end-0 bottom-0 me-4 mb-n1"></i>
-    ),
-    img: "../assets/img/testimonial-2.jpg",
-  },
-  {
-    description:
-      "Tempor stet labore dolor clita stet diam amet ipsum dolor duo ipsum rebum stet dolor amet diam stet. Est stet ea lorem amet est kasd kasd et erat magna eos",
-    name: "Client Name",
-    profession: "Profession",
-    icon: (
-      <i class="fa fa-quote-right fa-3x text-primary position-absolute end-0 bottom-0 me-4 mb-n1"></i>
-    ),
-    img: "../assets/img/testimonial-3.jpg",
   },
 ];
 
