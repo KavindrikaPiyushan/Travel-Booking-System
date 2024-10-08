@@ -26,7 +26,7 @@ export default function Login() {
       <div className="overlay"></div>
       <div className="login-box">
         <div className="login-form">
-          <h1 className="login-title">Welcome Back!</h1>
+          <h1 className="login-title">TravelBookingCA</h1>
           <p className="login-subtitle">Login to continue your journey</p>
           <form onSubmit={handleSubmit}>
             <div className="form-group">
