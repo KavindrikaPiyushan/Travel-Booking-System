@@ -69,13 +69,14 @@ export const carouselData = [
     title: "Top Most Hotles in the World",
     subtitle: "Book with lowest price",
     btn2: "Book Hotel",
-    link:"/rooms"
+    link:"/hotels"
   },
   {
     img: "../assets/img/bg2.webp",
     title: " Book Your Dream Car with Ease",
     subtitle: "Explore the World Safely",
     btn2: "Rent Car",
+    link:"/carRentals"
   },
  
 ];

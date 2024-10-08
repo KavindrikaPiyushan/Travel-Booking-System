@@ -7,7 +7,8 @@ import Services from "./ServicesPage";
 import Home from "../components/home/Home";
 import FlightBooking from "./FlightBooking";
 import CarRentalBooking from "./CarRentalBooking";
-import Login from './Login'
+import Login from './Login';
+import Introducing from "../components/introducing/Introducing";
 export {
   FlightBooking,
   Login,
@@ -19,4 +20,5 @@ export {
   PageNotFound,
   Room,
   Services,
+  Introducing
 };
