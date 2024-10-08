@@ -10,7 +10,7 @@
     max-width: 1200px; /* Increased from 600px */
     transform: translate(-50%, -50%);
     display: block; 
-    width: 70%; /* Added to make the form responsive */
+    width: 40%; /* Added to make the form responsive */
 }
 .popup-overlay {
     position: fixed;
@@ -27,7 +27,7 @@
     font-size: 2rem; /* Reduced from 2.5rem */
     text-align: center;
     color: #004085;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 
 .flight-booking-form {

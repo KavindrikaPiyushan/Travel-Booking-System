@@ -62,32 +62,30 @@ const FlightBooking = () => {
             title=""
             subtitle="Our Recommendations For Safe Travel"
           />
-          <div className="row g-4">
+          <div className="row g-4 ">
             {flightDetails.map((item, key) => (
               <div
                 className="col-lg-3 col-md-4 wow fadeInUp"
                 data-wow-delay="0.1s"
+                
               >
-                <div className="room-item shadow rounded overflow-hidden">
-                  <div className="position-relative">
-                    <img className="img-fluid" src={item.img} alt="img" />
+                <div className="room-item shadow rounded overflow-hidden"  >
+                  <div className="position-relative" >
+                    <img className="img-fluid" src={item.img} alt="img" style={{width:'420px',height:'180px'}} />
                     <small className="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">
                       {item.price}
                     </small>
                   </div>
-                  <div className="p-4 mt-2">
-                    <div className="d-flex justify-content-between mb-3">
+                  <div className="p-4  mt-2">
+                    <div className="d-flex justify-content-between ">
                       <h5 className="mb-0">{item.name}</h5>
-                      <div className="ps-2">{item.star}</div>
+                      {/* <div className="ps-2"><img src={item.logo} alt="" className='' style={{width:'50px',height:'50px',borderRadius:'50%' }} /></div> */}
                     </div>
-                    <div className="d-flex mb-3">
-                      {facility.map((item, index) => (
-                        <small className="border-end me-3 pe-3">
-                          {item.icon}
-                          {item.quantity} {item.facility}
-                        </small>
-                      ))}
-                    </div>
+                    <div className="mb-3">{item.duration}</div>
+                   
+                      
+                    
+                    
                     <p className="text-body mb-3">{item.description}</p>
                     <div className="d-flex justify-content-between">
                       <a

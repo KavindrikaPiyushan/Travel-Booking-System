@@ -5,13 +5,21 @@ import "../../css/HotelBookingForm.css";
 
 export default function Rooms() {
   const [isPopupVisible, setPopupVisible] = useState(false);
-  const [isReviewPopupVisible, setReviewPopupVisible] = useState(false); // State for review popup
+  const [isReviewPopupVisible, setReviewPopupVisible] = useState(false);
+  const [isReviewListVisible, setReviewListVisible] = useState(false); // State for review list popup
   const [reviews, setReviews] = useState([]); // State to store reviews
   const [reviewForm, setReviewForm] = useState({
     name: "",
     rating: "",
     comments: ""
   });
+
+  // Dummy review data
+  const dummyReviews = [
+    { name: "Alice", rating: 5, comments: "Amazing experience!" },
+    { name: "Bob", rating: 4, comments: "Very good service." },
+    { name: "Charlie", rating: 3, comments: "Average stay." }
+  ];
 
   const openPopup = () => {
     setPopupVisible(true);
@@ -27,6 +35,14 @@ export default function Rooms() {
 
   const closeReviewPopup = () => {
     setReviewPopupVisible(false);
+  };
+
+  const openReviewListPopup = () => {
+    setReviewListVisible(true);
+  };
+
+  const closeReviewListPopup = () => {
+    setReviewListVisible(false);
   };
 
   const handleReviewChange = (e) => {
@@ -82,10 +98,11 @@ export default function Rooms() {
               <div
                 className="col-lg-4 col-md-6 wow fadeInUp"
                 data-wow-delay="0.1s"
+                key={key} // Added key for mapping
               >
                 <div className="room-item shadow rounded overflow-hidden">
                   <div className="position-relative">
-                    <img className="img-fluid" src={item.img} alt="img" style={{width:'500px',height:'300px'}}/>
+                    <img className="img-fluid" src={item.img} alt="img" style={{ width: '500px', height: '300px' }} />
                     <small className="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">
                       {item.price}
                     </small>
@@ -93,14 +110,23 @@ export default function Rooms() {
                   <div className="p-4 mt-2">
                     <div className="d-flex justify-content-between mb-3">
                       <h5 className="mb-0">{item.name}</h5>
-                      <div style={{display:'flex',flexDirection:'column'}}>
-                      <div className="ps-2" >{item.star} </div>
-                      <a href="" style={{fontSize:'15px',textAlign:'center'}}>View Reviews</a>
+                      <div style={{ display: 'flex', flexDirection: 'column' }}>
+                        <div className="ps-2">{item.star} </div>
+                        <a
+                          href="#"
+                          style={{ fontSize: '15px', textAlign: 'center' }}
+                          onClick={(e) => {
+                            e.preventDefault();
+                            openReviewListPopup(); // Open review list popup
+                          }}
+                        >
+                          View Reviews
+                        </a>
                       </div>
                     </div>
                     <div className="d-flex mb-3">
                       {facility.map((item, index) => (
-                        <small className="border-end me-3 pe-3">
+                        <small className="border-end me-3 pe-3" key={index}>
                           {item.icon}
                           {item.quantity} {item.facility}
                         </small>
@@ -110,7 +136,7 @@ export default function Rooms() {
                     <div className="d-flex justify-content-between">
                       <a
                         className="btn btn-sm btn-primary rounded py-2 px-4"
-                        href=""
+                        href="#"
                         onClick={(e) => {
                           e.preventDefault();
                           openReviewPopup();
@@ -120,7 +146,7 @@ export default function Rooms() {
                       </a>
                       <a
                         className="btn btn-sm btn-dark rounded py-2 px-4"
-                        href=""
+                        href="#"
                         onClick={(e) => {
                           e.preventDefault();
                           openPopup();
@@ -136,7 +162,7 @@ export default function Rooms() {
           </div>
 
           {/* Review Popup */}
-          {isReviewPopupVisible ? (
+          {isReviewPopupVisible && (
             <>
               <div className="popup-overlay"></div>
               <div className="review-popup">
@@ -197,12 +223,38 @@ export default function Rooms() {
                 </form>
               </div>
             </>
-          ) : (
-            ""
           )}
 
+          {/* Review List Popup */}
+          {isReviewListVisible && (
+  <>
+    <div className="popup-overlay"></div>
+    <div className="review-popup">
+      <h2 className="form-title">Reviews</h2>
+      <div className="review-list">
+        {dummyReviews.concat(reviews).map((review, index) => (
+          <div key={index} className="review-item">
+            <h5>{review.name}</h5>
+            <p>Rating: {review.rating} ⭐</p>
+            <p>{review.comments}</p>
+          </div>
+        ))}
+      </div>
+      <button
+        type="button"
+        onClick={closeReviewListPopup}
+         className="submit-btn"
+        style={{ marginTop: "10px",backgroundColor: "gray" }}
+        
+      >
+        Close
+      </button>
+    </div>
+  </>
+)}
+
           {/* Booking Popup */}
-          {isPopupVisible ? (
+          {isPopupVisible && (
             <>
               <div className="popup-overlay"></div>
               <div className="booking-form-container">
@@ -219,7 +271,6 @@ export default function Rooms() {
                       required
                     />
                   </div>
-
                   <div className="form-group">
                     <label htmlFor="checkInDate">Check-In Date:</label>
                     <input
@@ -231,7 +282,6 @@ export default function Rooms() {
                       required
                     />
                   </div>
-
                   <div className="form-group">
                     <label htmlFor="checkOutDate">Check-Out Date:</label>
                     <input
@@ -243,7 +293,6 @@ export default function Rooms() {
                       required
                     />
                   </div>
-
                   <div className="form-group">
                     <label htmlFor="guests">Number of Guests:</label>
                     <input
@@ -256,7 +305,6 @@ export default function Rooms() {
                       required
                     />
                   </div>
-
                   <div className="form-group">
                     <label htmlFor="roomType">Room Type:</label>
                     <select
@@ -271,12 +319,11 @@ export default function Rooms() {
                       <option value="suite">Suite</option>
                     </select>
                   </div>
-
                   <button type="submit" className="submit-btn">
-                    Book Now
+                    Confirm Booking
                   </button>
                   <button
-                    type="submit"
+                    type="button"
                     onClick={closePopup}
                     className="submit-btn"
                     style={{ backgroundColor: "gray", marginTop: "10px" }}
@@ -286,8 +333,6 @@ export default function Rooms() {
                 </form>
               </div>
             </>
-          ) : (
-            ""
           )}
         </div>
       </div>

@@ -113,103 +113,104 @@ const CarRentalBooking = () => {
       </div>
 
       {isPopupVisible && (
-        <>
-          <div className="popup-overlay"></div>
-          <div className="car-booking-container">
-            <h2 className="form-title">Car Rental Booking</h2>
-            <form className="car-booking-form" onSubmit={handleSubmit}>
-              <div className="form-group">
-                <label htmlFor="pickupLocation">Pickup Location:</label>
-                <input
-                  type="text"
-                  id="pickupLocation"
-                  name="pickupLocation"
-                  value={formData.pickupLocation}
-                  onChange={handleChange}
-                  placeholder="Enter city or airport"
-                  required
-                />
-              </div>
+  <>
+    <div className="popup-overlay"></div>
+    <div className="car-booking-container">
+      <h2 className="form-title">Car Rental Booking</h2>
+      <form className="car-booking-form" onSubmit={handleSubmit}>
+        <div className="form-group">
+          <label htmlFor="pickupLocation">Pickup Location:</label>
+          <input
+            type="text"
+            id="pickupLocation"
+            name="pickupLocation"
+            value={formData.pickupLocation}
+            onChange={handleChange}
+            placeholder="Enter city or airport"
+            required
+          />
+        </div>
 
-              <div className="form-group">
-                <label htmlFor="dropoffLocation">Dropoff Location:</label>
-                <input
-                  type="text"
-                  id="dropoffLocation"
-                  name="dropoffLocation"
-                  value={formData.dropoffLocation}
-                  onChange={handleChange}
-                  placeholder="Enter city or airport"
-                  required
-                />
-              </div>
+        <div className="form-group">
+          <label htmlFor="dropoffLocation">Dropoff Location:</label>
+          <input
+            type="text"
+            id="dropoffLocation"
+            name="dropoffLocation"
+            value={formData.dropoffLocation}
+            onChange={handleChange}
+            placeholder="Enter city or airport"
+            required
+          />
+        </div>
 
-              <div className="form-group">
-                <label htmlFor="pickupDate">Pickup Date:</label>
-                <input
-                  type="date"
-                  id="pickupDate"
-                  name="pickupDate"
-                  value={formData.pickupDate}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
+        <div className="form-group">
+          <label htmlFor="pickupDate">Pickup Date:</label>
+          <input
+            type="date"
+            id="pickupDate"
+            name="pickupDate"
+            value={formData.pickupDate}
+            onChange={handleChange}
+            required
+          />
+        </div>
 
-              <div className="form-group">
-                <label htmlFor="returnDate">Return Date:</label>
-                <input
-                  type="date"
-                  id="returnDate"
-                  name="returnDate"
-                  value={formData.returnDate}
-                  onChange={handleChange}
-                />
-              </div>
+        <div className="form-group">
+          <label htmlFor="returnDate">Return Date:</label>
+          <input
+            type="date"
+            id="returnDate"
+            name="returnDate"
+            value={formData.returnDate}
+            onChange={handleChange}
+          />
+        </div>
 
-              <div className="form-group">
-                <label htmlFor="passengers">Number of Passengers:</label>
-                <input
-                  type="number"
-                  id="passengers"
-                  name="passengers"
-                  min="1"
-                  value={formData.passengers}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
+        <div className="form-group">
+          <label htmlFor="passengers">Number of Passengers:</label>
+          <input
+            type="number"
+            id="passengers"
+            name="passengers"
+            min="1"
+            value={formData.passengers}
+            onChange={handleChange}
+            required
+          />
+        </div>
 
-              <div className="form-group">
-                <label htmlFor="carType">Car Type:</label>
-                <select
-                  id="carType"
-                  name="carType"
-                  value={formData.carType}
-                  onChange={handleChange}
-                  required
-                >
-                  <option value="compact">Compact</option>
-                  <option value="suv">SUV</option>
-                  <option value="luxury">Luxury</option>
-                </select>
-              </div>
+        <div className="form-group">
+          <label htmlFor="carType">Car Type:</label>
+          <select
+            id="carType"
+            name="carType"
+            value={formData.carType}
+            onChange={handleChange}
+            required
+          >
+            <option value="compact">Compact</option>
+            <option value="suv">SUV</option>
+            <option value="luxury">Luxury</option>
+          </select>
+        </div>
 
-              <button type="submit" className="submit-btn">
-                Rent Car
-              </button>
-              <button
-                type="button"
-                onClick={closePopup}
-                className="submit-btn"
-                style={{ backgroundColor: "gray", marginTop: "10px" }}
-              >
-                Cancel
-              </button>
-            </form>
-          </div>
-        </>
-      )}
+        <button type="submit" className="submit-btn">
+          Rent Car
+        </button>
+        <button
+          type="button"
+          onClick={closePopup}
+          className="submit-btn"
+          style={{ backgroundColor: "gray", marginTop: "10px" }}
+        >
+          Cancel
+        </button>
+      </form>
+    </div>
+  </>
+)}
+
 
       <Footer />
     </>
