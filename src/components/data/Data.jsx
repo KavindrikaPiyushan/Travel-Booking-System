@@ -81,18 +81,21 @@ export const carouselData = [
     title: " Book Your Dream Flight with Ease",
     subtitle: "Explore the World Safely",
     btn2: "Book Flight",
+    link:"/flightBooking"
   },
   {
     img: "../assets/img/bg3.webp",
     title: "Top Most Hotles in the World",
     subtitle: "Book with lowest price",
     btn2: "Book Hotel",
+    link:"/rooms"
   },
   {
     img: "../assets/img/bg2.webp",
     title: " Book Your Dream Car with Ease",
     subtitle: "Explore the World Safely",
     btn2: "Rent Car",
+     link:"/carRentals"
   },
  
 ];

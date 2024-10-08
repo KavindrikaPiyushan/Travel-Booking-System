@@ -57,7 +57,7 @@ export default function Carousel() {
                       </h1>
                      
                       <a
-                        href=""
+                        href={val.link}
                         className="btn btn-light py-md-3 px-md-5 me-3 animated "
                         
                       >

@@ -6,7 +6,6 @@ import "./css/animate.min.css";
 import Header from "./components/common/Header";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import {
-  GetStarted,
   CarRentalBooking,
   FlightBooking,
   Home,
@@ -29,7 +28,7 @@ export default function App() {
         
           <Routes>
 
-            <Route path="/" element={<GetStarted />} />
+            <Route path="/" element={<Home />} />
             <Route path="/home" element={<Home />} />
             <Route path="/booking" element={<Booking />} />
             <Route path="/team" element={<Team />} />
