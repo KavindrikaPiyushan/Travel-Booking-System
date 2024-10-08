@@ -16,7 +16,6 @@ import {
   Room,
   Services,
   Team,
-  Testimonial,
 } from "./pages/index";
 import Footer from "./components/common/Footer";
 export default function App() {
@@ -32,7 +31,6 @@ export default function App() {
             <Route path="/home" element={<Home />} />
             <Route path="/booking" element={<Booking />} />
             <Route path="/team" element={<Team />} />
-            <Route path="/testimonial" element={<Testimonial />} />
             <Route path="/about" element={<AboutUs />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/*" element={<PageNotFound />} />
