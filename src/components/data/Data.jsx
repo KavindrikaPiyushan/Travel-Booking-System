@@ -287,12 +287,12 @@ export const carDetails = [
       <small class="fa fa-star text-primary"></small>,
       <small class="fa fa-star text-primary"></small>,
     ],
-    description: "Perfect for city driving with great fuel efficiency.",
+    description: "Perfect for city driving with excellent fuel efficiency and easy parking.",
     bookNowBtn: "Rent Now",
     detailsBtn: "Details",
   },
   {
-    img: "../assets/img/car2.jpg",
+    img: "../assets/img/car2.webp",
     name: "SUV",
     price: "$65/day",
     star: [
@@ -302,14 +302,14 @@ export const carDetails = [
       <small class="fa fa-star text-primary"></small>,
       <small class="fa fa-star text-primary"></small>,
     ],
-    description: "Spacious and comfortable, ideal for family trips.",
+    description: "Spacious and comfortable, perfect for family trips and off-road adventures.",
     bookNowBtn: "Rent Now",
     detailsBtn: "Details",
   },
   {
-    img: "../assets/img/car2.jpg",
-    name: "SUV",
-    price: "$65/day",
+    img: "../assets/img/car3.png",
+    name: "Luxury Sedan",
+    price: "$95/day",
     star: [
       <small class="fa fa-star text-primary"></small>,
       <small class="fa fa-star text-primary"></small>,
@@ -317,42 +317,42 @@ export const carDetails = [
       <small class="fa fa-star text-primary"></small>,
       <small class="fa fa-star text-primary"></small>,
     ],
-    description: "Spacious and comfortable, ideal for family trips.",
+    description: "Premium features with a smooth ride, ideal for business or special occasions.",
     bookNowBtn: "Rent Now",
     detailsBtn: "Details",
   },
   {
-    img: "../assets/img/car2.jpg",
-    name: "SUV",
-    price: "$65/day",
-   star: [
+    img: "../assets/img/car4.webp",
+    name: "Convertible",
+    price: "$120/day",
+    star: [
       <small class="fa fa-star text-primary"></small>,
       <small class="fa fa-star text-primary"></small>,
       <small class="fa fa-star text-primary"></small>,
       <small class="fa fa-star text-primary"></small>,
       <small class="fa fa-star text-primary"></small>,
     ],
-    description: "Spacious and comfortable, ideal for family trips.",
+    description: "Feel the wind as you drive with this stylish convertible, perfect for scenic routes.",
     bookNowBtn: "Rent Now",
     detailsBtn: "Details",
   },
   {
-    img: "../assets/img/car2.jpg",
-    name: "SUV",
-    price: "$65/day",
-   star: [
+    img: "../assets/img/car5.png",
+    name: "Minivan",
+    price: "$75/day",
+    star: [
       <small class="fa fa-star text-primary"></small>,
       <small class="fa fa-star text-primary"></small>,
       <small class="fa fa-star text-primary"></small>,
       <small class="fa fa-star text-primary"></small>,
       <small class="fa fa-star text-primary"></small>,
     ],
-    description: "Spacious and comfortable, ideal for family trips.",
+    description: "A great choice for group travel, offering plenty of space and comfort.",
     bookNowBtn: "Rent Now",
     detailsBtn: "Details",
   },
-  // Add more car details...
 ];
+
 
 export const rentalFeatures = [
   { icon: "🧳", name: "Luggage Space" },

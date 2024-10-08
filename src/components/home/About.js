@@ -25,9 +25,8 @@ export default function About() {
                 <span className="text-primary">TravelBookingCA</span>
               </h1>
               <p className="mb-4">
-                Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit.
-                Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit,
-                sed stet lorem sit clita duo justo magna dolore erat amet
+              your one-stop destination for seamless travel bookings. Whether you're planning a business trip, a family vacation, or a quick getaway, we offer a range of services including flights, hotels, and car rentals to make your journey hassle-free. 
+              <br></br><br></br>At TravelBookingCA, we believe in creating memorable travel experiences. With an easy-to-use platform and personalized customer service, we ensure that your trip is smooth from start to finish. No matter where you're headed, we’re here to help you get there comfortably and affordably.
               </p>
               <div className="row g-3 pb-4">
                 {about.map((item, key) => (
