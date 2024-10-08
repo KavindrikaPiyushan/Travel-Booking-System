@@ -24,7 +24,7 @@ export default function Services() {
                     </div>
                   </div>
                   <h5 className="mb-3">{item.name}</h5>
-                  <p className="text-body mb-0">{item.discription}</p>
+                  <p className="text-body mb-0">{item.description}</p>
                 </a>
               </div>
             ))}

@@ -16,7 +16,7 @@ export const navList = [
   },
   {
     id: 4,
-    path: "/rooms",
+    path: "/hotels",
     text: "Hotels",
   },
   {
@@ -80,38 +80,37 @@ export const carouselData = [
 
 export const services = [
   {
+    icon: <i class="fa fa-plane-departure fa-2x text-primary"></i>,
+    name: "Flight Booking",
+    description: "Book flights to destinations worldwide with competitive rates.",
+  },
+  {
     icon: <i class="fa fa-hotel fa-2x text-primary"></i>,
-    name: "Rooms & Appartment",
-    discription: "Contrary to popular belief, ipsum is not simply random.",
+    name: "Hotel Reservations",
+    description: "Find the perfect stay with a wide range of hotels to choose from.",
   },
   {
-    icon: <i class="fa fa-utensils fa-2x text-primary"></i>,
-    name: "Food & Restaurant",
-    discription: "Contrary to popular belief, ipsum is not simply random.",
+    icon: <i class="fa fa-car fa-2x text-primary"></i>,
+    name: "Car Rentals",
+    description: "Rent cars from trusted providers at your destination for convenience.",
   },
   {
-    icon: <i class="fa fa-spa fa-2x text-primary"></i>,
-    name: "Spa & Fitness",
-    discription: "Contrary to popular belief, ipsum is not simply random.",
-  },
-
-  {
-    icon: <i class="fa fa-swimmer fa-2x text-primary"></i>,
-    name: "Sports & Gaming",
-    discription: "Contrary to popular belief, ipsum is not simply random.",
+    icon: <i class="fa fa-route fa-2x text-primary"></i>,
+    name: "Travel Packages",
+    description: "Bundle flights, hotels, and cars for an all-in-one travel experience.",
   },
   {
-    icon: <i class="fa fa-glass-cheers fa-2x text-primary"></i>,
-    name: "Event & Party",
-    discription: "Contrary to popular belief, ipsum is not simply random.",
+    icon: <i class="fa fa-umbrella-beach fa-2x text-primary"></i>,
+    name: "Vacation Deals",
+    description: "Discover exclusive vacation deals and last-minute offers.",
   },
-
   {
-    icon: <i class="fa fa-dumbbell fa-2x text-primary"></i>,
-    name: "GYM & Yoga",
-    discription: "Contrary to popular belief, ipsum is not simply random.",
+    icon: <i class="fa fa-concierge-bell fa-2x text-primary"></i>,
+    name: "Concierge Services",
+    description: "Get 24/7 assistance with your travel plans for a stress-free trip.",
   },
 ];
+
 
 export const footerItem = [
   {

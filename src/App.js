@@ -32,7 +32,7 @@ export default function App() {
             <Route path="/about" element={<AboutUs />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/*" element={<PageNotFound />} />
-            <Route path="/rooms" element={<Room />} />
+            <Route path="/hotels" element={<Room />} />
             <Route path="/services" element={<Services />} />
             <Route path="/flightBooking" element={<FlightBooking/>}></Route>
             <Route path="/carRentals" element={<CarRentalBooking/>}></Route>
