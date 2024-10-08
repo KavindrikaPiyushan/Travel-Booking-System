@@ -8,7 +8,11 @@ import Room from "./RoomPage";
 import Services from "./ServicesPage";
 import Home from "../components/home/Home";
 import GetStarted from "./GetStarted";
+import FlightBooking from "./FlightBooking";
+import CarRentalBooking from "./CarRentalBooking";
 export {
+  FlightBooking,
+  CarRentalBooking,
   GetStarted,
   Home,
   Booking,

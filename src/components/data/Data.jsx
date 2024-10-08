@@ -20,6 +20,16 @@ export const navList = [
     text: "Hotels",
   },
   {
+    id: 7,
+    path: "/flightBooking",
+    text: "Flight Booking",
+  },
+  {
+    id: 8,
+    path: "/carRentals",
+    text: "Car Rentals",
+  },
+  {
     id: 5,
     path: "/page",
     text: "Page",
@@ -267,6 +277,120 @@ export const testimonial = [
 ];
 
 export const roomItems = [
+  {
+    img: "../assets/img/room-1.jpg",
+    price: "$110/night",
+    name: "Junior Suit",
+    star: [
+      <small class="fa fa-star text-primary"></small>,
+      <small class="fa fa-star text-primary"></small>,
+      <small class="fa fa-star text-primary"></small>,
+      <small class="fa fa-star text-primary"></small>,
+      <small class="fa fa-star text-primary"></small>,
+    ],
+    description:
+      "Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.",
+    yellowbtn: "View Detail",
+    darkbtn: "book now",
+  },
+
+  {
+    img: "../assets/img/room-2.jpg",
+    price: "$110/night",
+    name: "Executive Suite",
+    star: [
+      <small class="fa fa-star text-primary"></small>,
+      <small class="fa fa-star text-primary"></small>,
+      <small class="fa fa-star text-primary"></small>,
+      <small class="fa fa-star text-primary"></small>,
+      <small class="fa fa-star text-primary"></small>,
+    ],
+    description:
+      "Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.",
+    yellowbtn: "View Detail",
+    darkbtn: "book now",
+  },
+  {
+    img: "../assets/img/room-3.jpg",
+    price: "$110/night",
+    name: "Super Deluxe",
+    star: [
+      <small class="fa fa-star text-primary"></small>,
+      <small class="fa fa-star text-primary"></small>,
+      <small class="fa fa-star text-primary"></small>,
+      <small class="fa fa-star text-primary"></small>,
+      <small class="fa fa-star text-primary"></small>,
+    ],
+    description:
+      "Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.",
+    yellowbtn: "View Detail",
+    darkbtn: "book now",
+  },
+];
+
+export const carDetails = [
+  {
+    img: "../assets/img/car1.jpg",
+    name: "Compact Car",
+    price: "$45/day",
+    rating: "★★★★☆",
+    description: "Perfect for city driving with great fuel efficiency.",
+    bookNowBtn: "Rent Now",
+    detailsBtn: "Details",
+  },
+  {
+    img: "../assets/img/car2.jpg",
+    name: "SUV",
+    price: "$65/day",
+    rating: "★★★★★",
+    description: "Spacious and comfortable, ideal for family trips.",
+    bookNowBtn: "Rent Now",
+    detailsBtn: "Details",
+  },
+  // Add more car details...
+];
+
+export const rentalFeatures = [
+  { icon: "🧳", name: "Luggage Space" },
+  { icon: "🧑‍✈️", name: "Driver" },
+  { icon: "🚗", name: "Automatic" },
+  // Add more features...
+];
+
+
+export const flightDetails = [
+  {
+    img: "../assets/img/room-1.jpg",
+    price: "$110/night",
+    name: "Junior Suit",
+    star: [
+      <small class="fa fa-star text-primary"></small>,
+      <small class="fa fa-star text-primary"></small>,
+      <small class="fa fa-star text-primary"></small>,
+      <small class="fa fa-star text-primary"></small>,
+      <small class="fa fa-star text-primary"></small>,
+    ],
+    description:
+      "Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.",
+    yellowbtn: "View Detail",
+    darkbtn: "book now",
+  },
+  {
+    img: "../assets/img/room-1.jpg",
+    price: "$110/night",
+    name: "Junior Suit",
+    star: [
+      <small class="fa fa-star text-primary"></small>,
+      <small class="fa fa-star text-primary"></small>,
+      <small class="fa fa-star text-primary"></small>,
+      <small class="fa fa-star text-primary"></small>,
+      <small class="fa fa-star text-primary"></small>,
+    ],
+    description:
+      "Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.",
+    yellowbtn: "View Detail",
+    darkbtn: "book now",
+  },
   {
     img: "../assets/img/room-1.jpg",
     price: "$110/night",

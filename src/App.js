@@ -7,6 +7,8 @@ import Header from "./components/common/Header";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import {
   GetStarted,
+  CarRentalBooking,
+  FlightBooking,
   Home,
   Booking,
   AboutUs,
@@ -26,6 +28,7 @@ export default function App() {
        
         
           <Routes>
+
             <Route path="/" element={<GetStarted />} />
             <Route path="/home" element={<Home />} />
             <Route path="/booking" element={<Booking />} />
@@ -36,6 +39,8 @@ export default function App() {
             <Route path="/*" element={<PageNotFound />} />
             <Route path="/rooms" element={<Room />} />
             <Route path="/services" element={<Services />} />
+            <Route path="/flightBooking" element={<FlightBooking/>}></Route>
+            <Route path="/carRentals" element={<CarRentalBooking/>}></Route>
             
           </Routes>
          
