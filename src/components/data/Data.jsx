@@ -139,18 +139,23 @@ export const footerItem = [
     UnitItem: [
       {
         name: "About Us",
+        link:'about'
       },
       {
         name: "Contact Us",
+                link:'contact'
       },
       {
         name: "Privacy Policy",
+                link:''
       },
       {
-        name: "Terms & Condition",
+        name: "Terms & Conditions",
+                link:''
       },
       {
         name: "Support",
+                link:''
       },
     ],
   },
@@ -159,56 +164,64 @@ export const footerItem = [
     header: "Services",
     UnitItem: [
       {
-        name: "Food & Restaurant",
+        name: "Flight Booking",
+        link:'carRentals'
       },
       {
-        name: "Spa & Fitness",
+        name: "Hotel Reservations",
+        link:'hotels'
       },
       {
-        name: "Sports & Gaming",
+        name: "Car Rentals",
+        link:'carRentals'
       },
       {
-        name: "Event & Party",
+        name: "Travel Packages",
+        link:''
       },
       {
-        name: "GYM & Yoga",
+        name: "Vacation Deals",
+        link:''
       },
     ],
   },
 ];
 
+
 export const footerContact = [
   {
     icon: <i className="fa fa-map-marker-alt me-3"></i>,
-    name: "123 Street, New York, USA",
+    name: "TravelBookingCA, 456 Dublin Road, Dublin, Ireland",
   },
   {
     icon: <i className="fa fa-phone-alt me-3"></i>,
-    name: "+012 345 67890",
+    name: "+353 123 456789",
   },
   {
     icon: <i className="fa fa-envelope me-3"></i>,
-    name: "info@example.com",
+    name: "support@travelbookingca.com",
   },
 ];
+
 
 export const contact = [
   {
     icon: <i class="fa fa-envelope-open text-primary me-2"></i>,
     title: "Booking",
-    email: "book@example.com",
+    email: "booking@travelbookingca.com",
   },
   {
     icon: <i class="fa fa-envelope-open text-primary me-2"></i>,
-    title: "Technical",
-    email: "tech@example.com",
+    title: "Technical Support",
+    email: "techsupport@travelbookingca.com",
   },
   {
     icon: <i class="fa fa-envelope-open text-primary me-2"></i>,
-    title: "General",
-    email: "info@example.com",
+    title: "General Inquiries",
+    email: "info@travelbookingca.com",
   },
 ];
+
 
 export const roomItems = [
   {

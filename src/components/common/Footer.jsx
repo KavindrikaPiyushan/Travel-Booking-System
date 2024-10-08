@@ -39,7 +39,7 @@ export default function Footer() {
                       {section.header}
                     </h6>
                     {section.UnitItem.map((item, itemIndex) => (
-                      <a className="btn btn-link" href="" key={itemIndex}>
+                      <a className="btn btn-link" href={item.link} key={itemIndex}>
                         {item.name}
                       </a>
                     ))}
