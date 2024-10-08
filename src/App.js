@@ -7,6 +7,7 @@ import Header from "./components/common/Header";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import {
   CarRentalBooking,
+  Login,
   FlightBooking,
   Home,
   Booking,
@@ -25,8 +26,8 @@ export default function App() {
        
         
           <Routes>
-
-            <Route path="/" element={<Home />} />
+              
+            <Route path="/" element={<Login />} />
             <Route path="/home" element={<Home />} />
             <Route path="/booking" element={<Booking />} />
             <Route path="/about" element={<AboutUs />} />
