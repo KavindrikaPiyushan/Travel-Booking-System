@@ -44,6 +44,7 @@ export default function Contact() {
                 aria-hidden="false"
                 tabIndex="0"
               ></iframe>
+
             </div>
             <div className="col-md-6">
               <div className="wow fadeInUp" data-wow-delay="0.2s">
