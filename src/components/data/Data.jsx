@@ -112,28 +112,6 @@ export const services = [
     discription: "Contrary to popular belief, ipsum is not simply random.",
   },
 ];
-export const team = [
-  {
-    image: "../assets/img/team-1.jpg",
-    name: "Full Name",
-    designation: "Designation",
-  },
-  {
-    image: "../assets/img/team-2.jpg",
-    name: "Full Name",
-    designation: "Designation",
-  },
-  {
-    image: "../assets/img/team-3.jpg",
-    name: "Full Name",
-    designation: "Designation",
-  },
-  {
-    image: "../assets/img/team-3.jpg",
-    name: "Full Name",
-    designation: "Designation",
-  },
-];
 
 export const footerItem = [
   {
