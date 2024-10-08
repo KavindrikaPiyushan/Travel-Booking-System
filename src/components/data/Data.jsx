@@ -278,9 +278,9 @@ export const testimonial = [
 
 export const roomItems = [
   {
-    img: "../assets/img/room-1.jpg",
-    price: "$110/night",
-    name: "Junior Suit",
+    img: "../assets/img/aldinojpg.jpg",
+    price: "$110/night Junior Suit",
+    name: "Aldino Hotel",
     star: [
       <small class="fa fa-star text-primary"></small>,
       <small class="fa fa-star text-primary"></small>,
@@ -295,9 +295,9 @@ export const roomItems = [
   },
 
   {
-    img: "../assets/img/room-2.jpg",
-    price: "$110/night",
-    name: "Executive Suite",
+    img: "../assets/img/depps.jpg",
+    price: "$200/night Executive Suite",
+    name: "Deeps Hostel",
     star: [
       <small class="fa fa-star text-primary"></small>,
       <small class="fa fa-star text-primary"></small>,
@@ -312,8 +312,8 @@ export const roomItems = [
   },
   {
     img: "../assets/img/room-3.jpg",
-    price: "$110/night",
-    name: "Super Deluxe",
+    price: "$110/night Super Deluxe",
+    name: "Gordion Hotel",
     star: [
       <small class="fa fa-star text-primary"></small>,
       <small class="fa fa-star text-primary"></small>,
@@ -335,6 +335,33 @@ export const carDetails = [
     price: "$45/day",
     rating: "★★★★☆",
     description: "Perfect for city driving with great fuel efficiency.",
+    bookNowBtn: "Rent Now",
+    detailsBtn: "Details",
+  },
+  {
+    img: "../assets/img/car2.jpg",
+    name: "SUV",
+    price: "$65/day",
+    rating: "★★★★★",
+    description: "Spacious and comfortable, ideal for family trips.",
+    bookNowBtn: "Rent Now",
+    detailsBtn: "Details",
+  },
+  {
+    img: "../assets/img/car2.jpg",
+    name: "SUV",
+    price: "$65/day",
+    rating: "★★★★★",
+    description: "Spacious and comfortable, ideal for family trips.",
+    bookNowBtn: "Rent Now",
+    detailsBtn: "Details",
+  },
+  {
+    img: "../assets/img/car2.jpg",
+    name: "SUV",
+    price: "$65/day",
+    rating: "★★★★★",
+    description: "Spacious and comfortable, ideal for family trips.",
     bookNowBtn: "Rent Now",
     detailsBtn: "Details",
   },

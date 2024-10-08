@@ -5,6 +5,13 @@ import "../../css/HotelBookingForm.css";
 
 export default function Rooms() {
   const [isPopupVisible, setPopupVisible] = useState(false);
+  const [isReviewPopupVisible, setReviewPopupVisible] = useState(false); // State for review popup
+  const [reviews, setReviews] = useState([]); // State to store reviews
+  const [reviewForm, setReviewForm] = useState({
+    name: "",
+    rating: "",
+    comments: ""
+  });
 
   const openPopup = () => {
     setPopupVisible(true);
@@ -12,6 +19,31 @@ export default function Rooms() {
 
   const closePopup = () => {
     setPopupVisible(false);
+  };
+
+  const openReviewPopup = () => {
+    setReviewPopupVisible(true);
+  };
+
+  const closeReviewPopup = () => {
+    setReviewPopupVisible(false);
+  };
+
+  const handleReviewChange = (e) => {
+    const { name, value } = e.target;
+    setReviewForm({
+      ...reviewForm,
+      [name]: value,
+    });
+  };
+
+  const handleReviewSubmit = (e) => {
+    e.preventDefault();
+    // Store review
+    setReviews([...reviews, reviewForm]);
+    setReviewForm({ name: "", rating: "", comments: "" }); // Reset form
+    closeReviewPopup();
+    console.log(reviews); // You can handle review display or submission here
   };
 
   const [formData, setFormData] = useState({
@@ -53,7 +85,7 @@ export default function Rooms() {
               >
                 <div className="room-item shadow rounded overflow-hidden">
                   <div className="position-relative">
-                    <img className="img-fluid" src={item.img} alt="img" />
+                    <img className="img-fluid" src={item.img} alt="img" style={{width:'500px',height:'300px'}}/>
                     <small className="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">
                       {item.price}
                     </small>
@@ -61,7 +93,10 @@ export default function Rooms() {
                   <div className="p-4 mt-2">
                     <div className="d-flex justify-content-between mb-3">
                       <h5 className="mb-0">{item.name}</h5>
-                      <div className="ps-2">{item.star}</div>
+                      <div style={{display:'flex',flexDirection:'column'}}>
+                      <div className="ps-2" >{item.star} </div>
+                      <a href="" style={{fontSize:'15px',textAlign:'center'}}>View Reviews</a>
+                      </div>
                     </div>
                     <div className="d-flex mb-3">
                       {facility.map((item, index) => (
@@ -76,8 +111,12 @@ export default function Rooms() {
                       <a
                         className="btn btn-sm btn-primary rounded py-2 px-4"
                         href=""
+                        onClick={(e) => {
+                          e.preventDefault();
+                          openReviewPopup();
+                        }}
                       >
-                        {item.yellowbtn}
+                        Add Review
                       </a>
                       <a
                         className="btn btn-sm btn-dark rounded py-2 px-4"
@@ -95,10 +134,77 @@ export default function Rooms() {
               </div>
             ))}
           </div>
+
+          {/* Review Popup */}
+          {isReviewPopupVisible ? (
+            <>
+              <div className="popup-overlay"></div>
+              <div className="review-popup">
+                <h2 className="form-title">Add Review</h2>
+                <form onSubmit={handleReviewSubmit}>
+                  <div className="form-group">
+                    <label htmlFor="name">Name:</label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      value={reviewForm.name}
+                      onChange={handleReviewChange}
+                      required
+                    />
+                  </div>
+
+                  <div className="form-group">
+                    <label htmlFor="rating">Rating:</label>
+                    <select
+                      id="rating"
+                      name="rating"
+                      value={reviewForm.rating}
+                      onChange={handleReviewChange}
+                      required
+                    >
+                      <option value="">Choose rating</option>
+                      <option value="5">5 - Excellent</option>
+                      <option value="4">4 - Good</option>
+                      <option value="3">3 - Average</option>
+                      <option value="2">2 - Poor</option>
+                      <option value="1">1 - Terrible</option>
+                    </select>
+                  </div>
+
+                  <div className="form-group">
+                    <label htmlFor="comments">Comments:</label>
+                    <textarea
+                      id="comments"
+                      name="comments"
+                      value={reviewForm.comments}
+                      onChange={handleReviewChange}
+                      required
+                    />
+                  </div>
+
+                  <button type="submit" className="submit-btn">
+                    Submit Review
+                  </button>
+                  <button
+                    type="button"
+                    onClick={closeReviewPopup}
+                    className="submit-btn"
+                    style={{ backgroundColor: "gray", marginTop: "10px" }}
+                  >
+                    Cancel
+                  </button>
+                </form>
+              </div>
+            </>
+          ) : (
+            ""
+          )}
+
+          {/* Booking Popup */}
           {isPopupVisible ? (
             <>
               <div className="popup-overlay"></div>
-
               <div className="booking-form-container">
                 <h2 className="form-title">Hotel Booking Form</h2>
                 <form className="booking-form" onSubmit={handleSubmit}>

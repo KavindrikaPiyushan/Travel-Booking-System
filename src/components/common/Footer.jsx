@@ -1,25 +1,18 @@
 import { Link } from "react-router-dom";
 import { footerContact, footerItem, socialIcons } from "../data/Data";
+import logo from '../../img/logo.jpg';
 
 export default function Footer() {
   return (
     <>
       <div
-        className="container-fluid bg-dark text-light footer wow fadeIn mt-5"
+        className="container-fluid bg-dark text-light footer fadeIn mt-5"
         data-wow-delay="0.1s"
       >
         <div className="container pb-5">
           <div className="row g-5">
             <div className="col-md-6 col-lg-4">
-              <div className="bg-primary rounded p-4">
-                <Link to="/">
-                  <h1 className="text-white text-uppercase mb-3">Hotelier</h1>
-                </Link>
-                <p className="text-white mb-0">
-                  Build a professional website for your hotel business and grab
-                  the attention of new visitors upon your site’s launch.
-                </p>
-              </div>
+               <img src={logo} alt="" style={{width:'250px',height:'200px', borderRadius:'50%'}} />
             </div>
             <div className="col-md-6 col-lg-3">
               <h6 className="section-title text-start text-primary text-uppercase mb-4">

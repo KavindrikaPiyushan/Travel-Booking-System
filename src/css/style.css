@@ -423,7 +423,8 @@
 .footer {
     position: relative;
     margin-top: -110px;
-    padding-top: 180px;
+    padding-top: 80px;
+    padding-bottom:20px ;
 }
 
 .footer .btn.btn-social {
