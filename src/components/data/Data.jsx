@@ -1,3 +1,6 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlane,faCar } from "@fortawesome/free-solid-svg-icons";
+
 export const navList = [
   {
     id: 1,
@@ -73,9 +76,25 @@ export const carouselData = [
     title: " Book Your Dream Car with Ease",
     subtitle: "Explore the World Safely",
     btn2: "Rent Car",
-     link:"/carRentals"
   },
  
+];
+export const about = [
+  {
+    icon: <i class="fa fa-hotel fa-2x text-primary mb-2"></i>,
+    text: "Hotel Bookings",
+    count: "7861",
+  },
+  {
+    icon: <FontAwesomeIcon icon={faPlane} size="2x" className="text-primary mb-2" />,
+    text: "Flight Bookings",
+    count: "1234",
+  },
+  {
+    icon: <FontAwesomeIcon icon={faCar} size="2x" className="text-primary mb-2" />,
+    text: "Cat Rentals",
+    count: "4321",
+  },
 ];
 
 export const services = [

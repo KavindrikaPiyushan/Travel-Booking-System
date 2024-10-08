@@ -7,8 +7,10 @@ import Services from "./ServicesPage";
 import Home from "../components/home/Home";
 import FlightBooking from "./FlightBooking";
 import CarRentalBooking from "./CarRentalBooking";
+import Login from './Login'
 export {
   FlightBooking,
+  Login,
   CarRentalBooking,
   Home,
   Booking,
