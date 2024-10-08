@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { footerContact, footerItem, socialIcons } from "../data/Data";
-import logo from '../../img/logo.jpg';
+import logo from '../../img/logo.webp';
 
 export default function Footer() {
   return (
