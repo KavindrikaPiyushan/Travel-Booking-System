@@ -1,0 +1,30 @@
+@keyframes infiniteZoom {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes infiniteFade {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+  }
+  
+  /* Apply the animations to the image */
+  .infinite-zoom {
+    animation: infiniteZoom 3s infinite;
+  }
+  
+  .infinite-fade {
+    animation: infiniteFade 5s infinite;
+  }
+  
