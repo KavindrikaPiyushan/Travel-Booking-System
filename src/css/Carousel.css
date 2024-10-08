@@ -1,0 +1,5 @@
+.btn-light:hover {
+    background-color: #054d0b; /* Bootstrap primary color */
+    color: white; /* Ensure text color is readable */
+    border-color: #054d0b; /* Match border color to background */
+}

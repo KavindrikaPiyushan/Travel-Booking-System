@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { carouselData } from "../data/Data";
+import '../../css/Carousel.css';
 
 export default function Carousel() {
   const sliderRef = useRef(null);
@@ -21,11 +22,18 @@ export default function Carousel() {
 
   const settings = {
     dots: false,
-    infinite: true,
+    infinite: true, // Ensures infinite loop
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+    autoplay: true, // Enable autoplay
+    autoplaySpeed: 3000, // Time in milliseconds (3 seconds)
+    pauseOnHover: false, // Do not pause autoplay on hover
   };
+
+
+  
+
   return (
     <>
       <div className="container-fluid p-0 mb-5">
@@ -38,7 +46,7 @@ export default function Carousel() {
             <Slider ref={sliderRef} {...settings}>
               {carouselData.map((val, index) => (
                 <div className="carousel-item" key={index}>
-                  <img className="w-100" src={val.img} alt="Image" />
+                  <img className="w-100" style={{height:'92vh'}} src={val.img} alt="Image"  />
                   <div className="carousel-caption d-flex flex-column align-items-center justify-content-center">
                     <div className="p-3" style={{ maxWidth: "700px" }}>
                       <h6 className="section-title text-white text-uppercase mb-3 animated slideInDown">
@@ -47,18 +55,15 @@ export default function Carousel() {
                       <h1 className="display-3 text-white mb-4 animated slideInDown">
                         {val.title}
                       </h1>
+                     
                       <a
                         href=""
-                        className="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft"
-                      >
-                        {val.btn1}
-                      </a>
-                      <a
-                        href=""
-                        className="btn btn-light py-md-3 px-md-5 animated slideInRight"
+                        className="btn btn-light py-md-3 px-md-5 me-3 animated "
+                        
                       >
                         {val.btn2}
                       </a>
+                      
                     </div>
                   </div>
                 </div>

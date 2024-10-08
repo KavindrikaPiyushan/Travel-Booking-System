@@ -77,18 +77,28 @@ export const socialIcons = [
 
 export const carouselData = [
   {
-    img: "../assets/img/carousel-1.jpg",
-    title: "Discover A Brand Luxurious Hotel",
-    subtitle: "luxury living",
-    btn1: "Our Room",
-    btn2: "Book Room",
+    img: "../assets/img/bg1.jpg",
+    title: " Book Your Dream Flight with Ease",
+    subtitle: "Explore the World Safely",
+    btn2: "Book Flight",
   },
   {
-    img: "../assets/img/carousel-2.jpg",
-    title: "Discover A Brand Luxurious Hotel",
-    subtitle: "luxury living",
-    btn1: "Our Room",
-    btn2: "Book Room",
+    img: "../assets/img/bg3.webp",
+    title: "Top Most Hotles in the World",
+    subtitle: "Book with lowest price",
+    btn2: "Book Flight",
+  },
+  {
+    img: "../assets/img/bg2.webp",
+    title: " Book Your Dream Car with Ease",
+    subtitle: "Explore the World Safely",
+    btn2: "Book Flight",
+  },
+  {
+    img: "../assets/img/bg4.webp",
+    title: "Ratings for Smarter Decisions",
+    subtitle: "Uncover Genuine Insights",
+    btn2: "Book Flight",
   },
 ];
 export const about = [

@@ -13,7 +13,7 @@ export default function Home() {
     <>
       <Header/>
       <Carousel />
-      <Book />
+     
       <About />
       <Rooms />
       <Services />
