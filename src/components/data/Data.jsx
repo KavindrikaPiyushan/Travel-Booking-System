@@ -86,20 +86,15 @@ export const carouselData = [
     img: "../assets/img/bg3.webp",
     title: "Top Most Hotles in the World",
     subtitle: "Book with lowest price",
-    btn2: "Book Flight",
+    btn2: "Book Hotel",
   },
   {
     img: "../assets/img/bg2.webp",
     title: " Book Your Dream Car with Ease",
     subtitle: "Explore the World Safely",
-    btn2: "Book Flight",
+    btn2: "Rent Car",
   },
-  {
-    img: "../assets/img/bg4.webp",
-    title: "Ratings for Smarter Decisions",
-    subtitle: "Uncover Genuine Insights",
-    btn2: "Book Flight",
-  },
+ 
 ];
 export const about = [
   {
